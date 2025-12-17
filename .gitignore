@@ -1,0 +1,99 @@
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+*~
+.directory
+.Trash-*
+
+#-------------------------
+# Environment Files 
+#-------------------------
+.env
+.env.production
+.vagrant
+Vagrantfile
+
+#-------------------------
+# CodeIgniter 4 Writable 
+#-------------------------
+writable/cache/*
+!writable/cache/index.html
+
+writable/logs/*
+!writable/logs/index.html
+
+writable/session/*
+!writable/session/index.html
+
+writable/uploads/*
+!writable/uploads/index.html
+
+writable/debugbar/*
+php_errors.log
+
+#-------------------------
+# User Guide & Tests
+#-------------------------
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+tests/coverage*
+phpunit
+.phpunit.cache
+test-results/
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+.idea/
+*.iml
+.vscode/
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+*.sublime-workspace
+*.sublime-project
+
+#-------------------------
+# DOCKER 
+#-------------------------
+
+db_data/
+mysql_data/
+docker-compose.override.yml
+
+#-------------------------
+# Public Files 
+#-------------------------
+/public/captcha/*
+!/public/captcha/index.html
+
+# node modules
+/node_modules/
+package-lock.json
+
+# *.sql

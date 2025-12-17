@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Ini untuk Website CI4 kamu
+  app:
+    container_name: workload
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  # Ini untuk Database MySQL
+  db:
+    container_name: db_workload
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: db_workload    
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'      
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+volumes:
+  db_data:
